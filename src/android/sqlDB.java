@@ -177,7 +177,7 @@ public class sqlDB extends CordovaPlugin {
 
     private void checkDbOnStorage(String db, String src, final CallbackContext callbackContext) {
         File source;
-        if (src == "") {
+        if (src.equals("")) {
             source = this.cordova.getActivity().getDatabasePath(db);
         }
         else if (src.indexOf("file://") != -1) {
